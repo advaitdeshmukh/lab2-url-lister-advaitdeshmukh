@@ -63,4 +63,6 @@ mw-data:TemplateStyles:r886049734	12
 9. hdfs dfs -getmerge output-stream results_dataproc_4w.txt -> Merge output files
 10. LC_ALL=C sort -o results_dataproc_4w.txt results_dataproc_4w.txt -> Sort the results for easy comparison
 
-   
+## Resources & collaboration
+- Piazza posts that brought up common issues + Professor's post about updated requirement
+- Collaboration: worked independently + used chatGPTs assistance for debugging GCloud cluster creation issues
