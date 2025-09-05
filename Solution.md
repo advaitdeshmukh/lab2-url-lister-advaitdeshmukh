@@ -14,7 +14,19 @@
 A (slightly) surprising result I found was that 4 worker setup took marginally longer than 2 worker setup (73.48s for 2 workers opposed to 74.86s for 4 workers). I believe this can happen because of the large overheads compared to the actual task. As we scale the amount of data being processed I expect 4 worker setup to be faster than 2 worker setup.
 
 ## Outputs:
-Detailed counts for URLs that are present more than 5 times can be found in results_* files.
+Here's the URLs that appear more than 5 times with their respective counts:
+```
+#	20
+/wiki/Doi_(identifier)	18
+/wiki/Google_File_System	6
+/wiki/ISBN_(identifier)	18
+/wiki/MapReduce	7
+/wiki/S2CID_(identifier)	14
+mw-data:TemplateStyles:r1129693374	7
+mw-data:TemplateStyles:r1238218222	121
+mw-data:TemplateStyles:r1295599781	33
+mw-data:TemplateStyles:r886049734	12
+```
 
 ## Steps to replicate results(CSEL):
 1. make prepare -> this will download the input files
