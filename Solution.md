@@ -10,11 +10,13 @@
      - zone: us-central1-a
      - image: 2.3-debian12
 
-## Dataproc results comparison (2 workers vs 4 workers)
-A (slightly) surprising result I found was that 4 worker setup took marginally longer than 2 worker setup (73.48s for 4 workers opposed to 74.86s for 2 workers). I believe this can happen because of the large overheads compared to the actual task. As we scale the amount of data being processed I expect 4 worker setup to be faster than 2 worker setup.
+## Dataproc results comparison (2 workers vs 4 workers):
+A (slightly) surprising result I found was that 4 worker setup took marginally longer than 2 worker setup (73.48s for 2 workers opposed to 74.86s for 4 workers). I believe this can happen because of the large overheads compared to the actual task. As we scale the amount of data being processed I expect 4 worker setup to be faster than 2 worker setup.
+
+## Outputs:
+Detailed counts for URLs that are present more than 5 times can be found in results_* files.
 
 ## Steps to replicate results(CSEL):
-
 1. make prepare -> this will download the input files
 2. hdfs dfs -rm -r -f output-stream || true -> Delete any paths from last run
 3. mapred streaming \
