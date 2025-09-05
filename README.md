@@ -1,1 +1,1 @@
-./Solution.md
+Solution in [Solution.md](Solution.md)
