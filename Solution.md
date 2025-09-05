@@ -1,3 +1,18 @@
+# Lab 2: UrlCount (Python Streaming)
+
+## Overview:
+ I did this exercise using Hadoop Streaming in Python. The mapper extracts all the text that looks like a link (using regex) and emits a <url, 1> for each of the instance. The reducer sums counts per URL and prints the totals only if they are more than 5.
+
+## Software/Environment required:
+1. CSEL: Hadoop 3.x, Python 3.x
+2. Google Cloud Dataproc Specifics:
+     - region: us-central1
+     - zone: us-central1-a
+     - image: 2.3-debian12
+
+## Dataproc results comparison (2 workers vs 4 workers)
+A (slightly) surprising result I found was that 4 worker setup took marginally longer than 2 worker setup (73.48s for 4 workers opposed to 74.86s for 2 workers). I believe this can happen because of the large overheads compared to the actual task. As we scale the amount of data being processed I expect 4 worker setup to be faster than 2 worker setup.
+
 ## Steps to replicate results(CSEL):
 
 1. make prepare -> this will download the input files
